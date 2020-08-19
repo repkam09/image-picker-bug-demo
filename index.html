@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <script>
+        function handleUpload() {
+            var element = document.getElementById('add-photos');
+            var files = element.files
+
+            console.log("You selected " + files.length + " files");
+
+            var textspan = document.getElementById('insert-text-area');
+            textspan.innerText = "You selected " + files.length + " files";
+        }
+    </script>
+</head>
+
+<body>
+    <input accept="image/jpeg,image/png" id="add-photos" multiple type="file" onchange="handleUpload()">
+    <br />
+    <span id="insert-text-area"></span>
+</body>
+
+</html>
